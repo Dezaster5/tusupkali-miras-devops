@@ -15,6 +15,7 @@ python3 -m app.main
 ```
 
 The application listens on port 8000. `/` shows personal information; `/api/student` returns JSON.
+`/health` returns HTTP 200 and a JSON readiness status for Docker and Jenkins checks.
 
 ## Docker
 

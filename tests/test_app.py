@@ -46,6 +46,11 @@ class ApplicationTests(unittest.TestCase):
             self.get("/does-not-exist")
         self.assertEqual(error.exception.code, 404)
 
+    def test_health_endpoint_supports_container_readiness(self):
+        with self.get("/health") as response:
+            self.assertEqual(response.status, 200)
+            self.assertEqual(json.load(response), {"status": "ok"})
+
 
 if __name__ == "__main__":
     unittest.main()
