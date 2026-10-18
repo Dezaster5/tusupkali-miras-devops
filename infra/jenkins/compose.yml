@@ -14,6 +14,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./jenkins.yaml:/var/jenkins_config/jenkins.yaml:ro
       - ./jobs.groovy:/var/jenkins_config/jobs.groovy:ro
+      - ./.secrets/known_hosts:/var/jenkins_home/.ssh/known_hosts:ro
     secrets:
       - admin_password
       - github_deploy_key
