@@ -45,6 +45,14 @@ git remote -v
 
 ## Docker
 
+После Pipeline контейнер уже работает. Перед демонстрацией Compose останови и удали
+этот учебный контейнер (приложение не хранит пользовательские данные):
+
+```bash
+docker stop tusupkali-miras-container
+docker rm tusupkali-miras-container
+```
+
 ```bash
 docker build -t tusupkali-miras-devops .
 docker images
@@ -57,6 +65,8 @@ docker stop tusupkali-miras-container
 docker start tusupkali-miras-container
 docker compose down
 ```
+
+Когда закончишь Docker-демонстрацию, запусти Jenkins Job заново: Pipeline снова создаст контейнер.
 
 Для демонстрации ручного запуска с переменными сначала останови Compose:
 

@@ -19,6 +19,9 @@ The application listens on port 8000. `/` shows personal information; `/api/stud
 
 ## Docker
 
+If a previous Jenkins run created `tusupkali-miras-container`, stop and remove that lab
+container before the Compose demonstration; Compose needs to create its own container.
+
 ```bash
 docker build -t tusupkali-miras-devops .
 docker compose up -d

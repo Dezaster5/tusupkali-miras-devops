@@ -31,5 +31,13 @@ Jenkins checks out a commit, compiles and tests the application, builds an image
 If a stage fails, later ordinary stages are skipped. A build is successful only when Jenkins reports SUCCESS.
 
 ## Evidence and conclusion
+Verified on 18 October 2026:
+- Four HTTP integration tests passed in Ubuntu and in Jenkins.
+- Linux script, logs, permissions and process demonstrations completed successfully.
+- Docker build/run, environment variables, logs, exec, stop/start/rm and Compose completed.
+- Jenkins build #1: SUCCESS, duration 27.737 seconds.
+- Pipeline source commit: e9db19f25f6c1b55274ec711cf5be2f33bdc1e63.
+- Final application container: healthy; UID 10001 (student).
+
 Use the accompanying PDF and actual logs/screenshots for verified execution results.
 The student must record the continuous demonstration personally and understand each command.

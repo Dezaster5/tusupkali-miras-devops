@@ -1,0 +1,94 @@
+{
+  "number": 1,
+  "result": "SUCCESS",
+  "url": "http://localhost:8080/job/Tusupkali_Miras_DevOps/1/",
+  "duration": 27737,
+  "timestamp": 1792344767132,
+  "job": "Tusupkali_Miras_DevOps",
+  "stages": [
+    {
+      "_links": {
+        "self": {
+          "href": "/job/Tusupkali_Miras_DevOps/1/execution/node/10/wfapi/describe"
+        }
+      },
+      "id": "10",
+      "name": "Checkout",
+      "execNode": "",
+      "status": "SUCCESS",
+      "startTimeMillis": 1792344782060,
+      "durationMillis": 8116,
+      "pauseDurationMillis": 0
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/job/Tusupkali_Miras_DevOps/1/execution/node/19/wfapi/describe"
+        }
+      },
+      "id": "19",
+      "name": "Build",
+      "execNode": "",
+      "status": "SUCCESS",
+      "startTimeMillis": 1792344790271,
+      "durationMillis": 578,
+      "pauseDurationMillis": 0
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/job/Tusupkali_Miras_DevOps/1/execution/node/24/wfapi/describe"
+        }
+      },
+      "id": "24",
+      "name": "Test",
+      "execNode": "",
+      "status": "SUCCESS",
+      "startTimeMillis": 1792344790946,
+      "durationMillis": 1311,
+      "pauseDurationMillis": 0
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/job/Tusupkali_Miras_DevOps/1/execution/node/29/wfapi/describe"
+        }
+      },
+      "id": "29",
+      "name": "Docker Build",
+      "execNode": "",
+      "status": "SUCCESS",
+      "startTimeMillis": 1792344792360,
+      "durationMillis": 838,
+      "pauseDurationMillis": 0
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/job/Tusupkali_Miras_DevOps/1/execution/node/34/wfapi/describe"
+        }
+      },
+      "id": "34",
+      "name": "Docker Run",
+      "execNode": "",
+      "status": "SUCCESS",
+      "startTimeMillis": 1792344793303,
+      "durationMillis": 503,
+      "pauseDurationMillis": 0
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/job/Tusupkali_Miras_DevOps/1/execution/node/39/wfapi/describe"
+        }
+      },
+      "id": "39",
+      "name": "Declarative: Post Actions",
+      "execNode": "",
+      "status": "SUCCESS",
+      "startTimeMillis": 1792344794113,
+      "durationMillis": 325,
+      "pauseDurationMillis": 0
+    }
+  ]
+}
