@@ -16,14 +16,20 @@
 собирает Docker-образ и запускает контейнер. Все пять этапов описаны в Jenkinsfile.
 Job называется `Tusupkali_Miras_DevOps`.
 
-## Запуск из PowerShell в этой папке
+## Запуск
 
-```powershell
+На этом компьютере Docker Engine установлен в Ubuntu. Docker Desktop для проекта не требуется.
+Открой Ubuntu:
+
+```bash
+cd ~/devops/tusupkali_miras
+sudo systemctl start docker
 docker compose -f infra/jenkins/compose.yml up -d
 ```
 
 Открой http://localhost:8080/. Логин: `miras`.
-Пароль находится в локальном файле `infra/jenkins/.secrets/admin_password`.
+Пароль находится в локальном файле `infra/jenkins/.secrets/admin_password`
+в папке проекта (копия есть и в папке Windows).
 Он не загружается в GitHub и не входит в архив исходников.
 Открой Job -> Build Now -> Console Output.
 Убедись, что результат - `Finished: SUCCESS`, затем открой http://localhost:8000/.
@@ -41,7 +47,7 @@ git log --oneline --graph --all
 
 ## Что сдавать
 
-1. Ссылка на GitHub. Если репозиторий закрытый, выдай преподавателю доступ.
+1. Ссылка на публичный GitHub-репозиторий.
 2. PDF-отчёт с фактическими результатами и скриншотами.
 3. Непрерывное видео со своим голосом, ориентировочно 10-20 минут.
    Порядок показа: `docs/VIDEO_SCRIPT_RU.md`.
