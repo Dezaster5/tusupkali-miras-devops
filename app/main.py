@@ -33,6 +33,8 @@ class StudentHandler(BaseHTTPRequestHandler):
             self.respond(200, welcome_message(), "text/plain; charset=utf-8")
         elif self.path == "/api/student":
             self.respond(200, json.dumps(student_information()), "application/json")
+        elif self.path == "/health":
+            self.respond(200, json.dumps({"status": "ok"}), "application/json")
         else:
             self.respond(404, "Not found\n", "text/plain; charset=utf-8")
 
