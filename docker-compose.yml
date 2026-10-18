@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    image: tusupkali-miras-devops:latest
+    container_name: tusupkali-miras-container
+    labels:
+      devops.student-id: "38366"
+    environment:
+      STUDENT_NAME: ${STUDENT_NAME:-Miras}
+      STUDENT_SURNAME: ${STUDENT_SURNAME:-Tusupkali}
+      STUDENT_GROUP: ${STUDENT_GROUP:-IT2-2312}
+      STUDENT_ID: ${STUDENT_ID:-38366}
+    ports:
+      - "127.0.0.1:${APP_PORT:-8000}:8000"
