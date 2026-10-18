@@ -10,24 +10,8 @@ jenkins:
   authorizationStrategy:
     loggedInUsersCanDoAnything:
       allowAnonymousRead: false
-credentials:
-  system:
-    domainCredentials:
-      - credentials:
-          - basicSSHUserPrivateKey:
-              scope: GLOBAL
-              id: "github-readonly"
-              username: "git"
-              description: "Read-only deploy key for the individual laboratory repository"
-              privateKeySource:
-                directEntry:
-                  privateKey: "${github_deploy_key}"
 unclassified:
   location:
     url: "http://localhost:8080/"
-security:
-  gitHostKeyVerificationConfiguration:
-    sshHostKeyVerificationStrategy:
-      knownHostsFileVerificationStrategy: {}
 jobs:
   - file: /var/jenkins_config/jobs.groovy

@@ -23,7 +23,7 @@ Compose defines the image, container, local port and environment. The container 
 ## Jenkins
 The Jenkinsfile defines Checkout, Build, Test, Docker Build and Docker Run.
 The local controller is configured through JCasC and Job DSL, with authentication enabled.
-An independent read-only deploy key is used for GitHub. Local secrets are ignored by Git.
+The public GitHub repository is checked out over HTTPS. Local secrets are ignored by Git.
 
 ## Integrated workflow
 Linux provides the execution environment; Git records changes; GitHub stores the repository.

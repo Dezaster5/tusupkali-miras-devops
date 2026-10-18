@@ -5,8 +5,7 @@ pipelineJob('Tusupkali_Miras_DevOps') {
             scm {
                 git {
                     remote {
-                        url('git@github.com:Dezaster5/tusupkali-miras-devops.git')
-                        credentials('github-readonly')
+                        url('https://github.com/Dezaster5/tusupkali-miras-devops.git')
                     }
                     branch('*/main')
                 }
