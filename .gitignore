@@ -1,0 +1,12 @@
+*.log
+backup/
+.env
+**/.secrets/
+*.local.txt
+__pycache__/
+*.py[cod]
+test-results.txt
+.coverage
+.venv/
+.idea/
+.DS_Store
