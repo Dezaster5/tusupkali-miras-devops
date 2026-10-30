@@ -8,3 +8,5 @@ docs
 infra
 tests
 test-results.txt
+.venv
+.vscode

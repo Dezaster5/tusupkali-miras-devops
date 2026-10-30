@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: student application",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "app.main",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/.env",
+      "env": {
+        "PORT": "8002"
+      },
+      "python": "${workspaceFolder}/.venv/Scripts/python.exe"
+    }
+  ]
+}

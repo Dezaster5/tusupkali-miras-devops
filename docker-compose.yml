@@ -1,6 +1,9 @@
+name: tusupkali-miras
+
 services:
   app:
     build: .
+    restart: unless-stopped
     image: tusupkali-miras-devops:latest
     container_name: tusupkali-miras-container
     labels:

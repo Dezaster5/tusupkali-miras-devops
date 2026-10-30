@@ -1,0 +1,76 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Python: tests",
+      "type": "process",
+      "command": "${workspaceFolder}/.venv/Scripts/python.exe",
+      "args": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: start application",
+      "type": "process",
+      "command": "docker",
+      "args": [
+        "--context",
+        "desktop-linux",
+        "start",
+        "tusupkali-miras-container"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Jenkins: start",
+      "type": "process",
+      "command": "docker",
+      "args": [
+        "--context",
+        "desktop-linux",
+        "compose",
+        "-f",
+        "infra/jenkins/compose.yml",
+        "up",
+        "-d"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: containers",
+      "type": "process",
+      "command": "docker",
+      "args": [
+        "--context",
+        "desktop-linux",
+        "ps"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Linux: system information",
+      "type": "process",
+      "command": "wsl",
+      "args": [
+        "-d",
+        "Ubuntu",
+        "--cd",
+        "/home/dezaster_miras/devops/tusupkali_miras",
+        "--",
+        "bash",
+        "scripts/Tusupkali_Miras_system.sh"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}

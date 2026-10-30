@@ -1,6 +1,9 @@
+name: tusupkali-miras-ci
+
 services:
   jenkins:
     build: .
+    restart: unless-stopped
     image: tusupkali-miras-jenkins:local
     container_name: tusupkali-miras-jenkins
     user: "0:0"

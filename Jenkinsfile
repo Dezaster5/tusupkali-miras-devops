@@ -48,7 +48,7 @@ pipeline {
                         [ "$owner" = "$STUDENT_ID" ] || { echo 'Container belongs to another project'; exit 1; }
                         docker rm -f "$APP_CONTAINER"
                     fi
-                    docker run -d --name "$APP_CONTAINER" \
+                    docker run -d --restart unless-stopped --name "$APP_CONTAINER" \
                         --label "devops.student-id=$STUDENT_ID" \
                         -p 127.0.0.1:8000:8000 \
                         -e STUDENT_NAME -e STUDENT_SURNAME -e STUDENT_GROUP -e STUDENT_ID \
